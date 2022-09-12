@@ -1,0 +1,26 @@
+.main {
+  display: flex;
+  color: wheat;
+}
+
+.container {
+  display: flex;
+  overflow-x: auto;
+}
+
+.slide {
+  border-radius: 20px;
+  margin: 10px;
+  height: calc(100vh - 100px);
+  cursor: pointer;
+  color: #fff;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 500ms ease-in-out;
+}
+
+.slide:hover {
+  flex: 15;
+}
