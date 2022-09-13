@@ -1,9 +1,44 @@
 nav {
   display: flex;
-  align-content: center;
-
-  min-height: 70px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
   
+
   color: black;
   font-size: large;
+}
+.nav__logo {
+  width: 40px;
+  height: 55px;
+  margin: 5px;
+}
+.nav__assets, .nav__bio {
+  font-weight: 400;
+  font-size: 15px;
+  color: black;
+}
+.nav__link {
+  cursor: pointer;
+  &:visited {
+    color: black;
+  }
+}
+.nav__item:first-child {
+  flex-grow: 1;
+}
+.nav__assets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  width: 50px;
+}
+.bio {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.bio__img {
+  width: 38px;
+  height: 38px;
+  margin: 5px;
 }

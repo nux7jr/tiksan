@@ -3,53 +3,106 @@
   color: wheat;
 
 }
-// .container::-webkit-scrollbar {
-//   display: none;
-// }
+.container::-webkit-scrollbar {
+  display: none;
+}
 .container {
   display: flex;
   justify-content: left;
   align-items: left;
-  gap: 20px;
+  gap: 10px;
   overflow-x: auto;
   width: 100%;
 }
 .slide {
   height: calc(100vh - 90px);
   border-radius: 20px;
-  margin: 10px;
   cursor: pointer;
   color: #fff;
+  margin: 12px;
   flex: 1;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  display: flex;
   transition: all 500ms ease-in-out;
   &:nth-child(1) {
-    padding-left: 10px;
+    margin-left: 20px;
   }
 }
-h3 {
+.slide__heading {
   position: absolute;
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+  text-decoration-color: black;
   font-size: 24px;
-  left: 20px;
-  bottom: 20px;
+  left: 0px;
+  bottom: -30px;
   margin: 0;
   opacity: 0;
+}
+.slide__info {
+  position: absolute;
+  font-size: 24px;
+  color: black;
+  left: 10px;
+  bottom: 50px;
+  margin: 0 10px 0 0;
+  opacity: 0;
+  z-index: 1;
+}
+.slide__text {
+  margin: 0;
+  &:last-child {
+    width: 10px;
+  }
 }
 .active {
   flex: 15;
 }
-.active h3 {
+.active .slide__heading {
   opacity: 1;
   transition: opacity 0.3s ease-in;
+}
+.active .slide__info {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+.slide__button {
+    background-color: rgb(102, 207, 255);; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin-bottom: 10px;
+    margin-right: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    max-width: 150px;
+}
+.sliderScrollUp__button {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 0;
+}
+.sliderScrollDown__button {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 100px;
 }
 @media (max-width: 760px){
   .slide {
     min-width: 150px;
   }
   .active {
-    min-width: 300px;
+    min-width: 250px;
+    margin: 0;
+  }
+  .slide__button {
+    max-width: 150px;
   }
 }

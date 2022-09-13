@@ -2,6 +2,7 @@
 @import url(modules/header.css);
 @import url(modules/nav.css);
 @import url(modules/main.css);
+@import url(modules/popUp.css);
 body {
   padding: 0;
   margin: 0;
